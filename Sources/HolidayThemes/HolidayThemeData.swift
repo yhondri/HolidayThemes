@@ -48,23 +48,48 @@ public struct HolidayThemeData {
     let scaleRange: CGFloat
     let backgroundColor: UIColor
     
-    public init(particle: Particle = .autum,
-                particleImage: UIImage? = nil,
-                emitterPosition: CGPoint = CGPoint(x: 509.4, y: 200),
-                emitterSize: CGSize = CGSize(width: 1648.0, height: 200),
-                emitterMode: CAEmitterLayerEmitterMode = .surface,
-                renderMode: CAEmitterLayerRenderMode = .oldestLast,
-                birthRate: Float = 90,
-                lifetime: Float = 20.0,
-                velocity: CGFloat = 59.0,
-                velocityRange: CGFloat = -15.0,
-                xAcceleration: CGFloat = 5.0,
-                yAcceleration: CGFloat = 5.0,
-                emissionRange: CGFloat = 180.0 * (.pi / 180.0),
-                spin: CGFloat = -28.6 * (.pi / 180.0),
-                spinRange: CGFloat = 180.0 * (.pi / 180.0),
-                scale: CGFloat = 0.06,
-                scaleRange: CGFloat = 0.3,
+    public init(particle: Particle = .autum, particleImage: UIImage? = nil) {
+        self.init(frame: CGRect(x: 500, y: 0, width: 0, height: 0), particle: particle, particleImage: particleImage)
+    }
+    
+    public init(frame: CGRect, particle: Particle = .autum, velocity: CGFloat = 60, particleImage: UIImage? = nil, backgroundColor: UIColor = .clear) {
+        self.init(particle: particle,
+                  particleImage: particleImage,
+                  emitterPosition: CGPoint(x: frame.midX, y: 0),
+                  emitterSize: CGSize(width: frame.width, height: 1),
+                  emitterMode: .surface,
+                  renderMode: .oldestLast,
+                  birthRate: 60,
+                  lifetime: 20,
+                  velocity: velocity,
+                  velocityRange: velocity/4,
+                  xAcceleration: 5.0,
+                  yAcceleration: 5.0,
+                  emissionRange: 180.0 * (.pi / 180.0),
+                  spin: -180,
+                  spinRange: 180,
+                  scale: 0.05,
+                  scaleRange: 0.2,
+                  backgroundColor: backgroundColor)
+    }
+    
+    public init(particle: Particle,
+                particleImage: UIImage?,
+                emitterPosition: CGPoint,
+                emitterSize: CGSize,
+                emitterMode: CAEmitterLayerEmitterMode,
+                renderMode: CAEmitterLayerRenderMode,
+                birthRate: Float,
+                lifetime: Float,
+                velocity: CGFloat,
+                velocityRange: CGFloat,
+                xAcceleration: CGFloat,
+                yAcceleration: CGFloat,
+                emissionRange: CGFloat,
+                spin: CGFloat,
+                spinRange: CGFloat,
+                scale: CGFloat,
+                scaleRange: CGFloat,
                 backgroundColor: UIColor = .clear) {
         self.particle = particle
         self.emitterPosition = emitterPosition

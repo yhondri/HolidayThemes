@@ -70,7 +70,7 @@ struct EmiterFrameView: View {
                     Text(name).font(.system(.title)).foregroundColor(textColor)
                     Spacer()
                 }.background(titleBackgroundColor)
-                HolidayThemeView(frame: proxy.frame(in: .local), themeData: HolidayThemeData(particle: particle, backgroundColor: backgroundColor))
+                HolidayThemeView(frame: proxy.frame(in: .local), themeData: HolidayThemeData(frame: proxy.frame(in: .local), particle: particle, backgroundColor: backgroundColor))
             }
         }
     }
