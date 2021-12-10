@@ -2,6 +2,8 @@
 
 SwiftUI module library for adding seasons theme animations to your app.
 
+<img src= "https://github.com/yhondri/HolidayThemes/blob/master/seasons.gif?raw=true" width="200" height="300" >
+
 ## Requirements
 - iOS 13.0+
 - Xcode 12.0+
@@ -60,7 +62,7 @@ GeometryReader { proxy in
 
 ## License
 
-MIT
+[MIT](https://github.com/yhondri/HolidayThemes/blob/master/LICENSE)
 
 **Free Software, Hell Yeah!**
 
