@@ -1,5 +1,6 @@
 //
-//  HolidayThemesTests.swift
+//  Particle.swift
+//  
 //
 //  Created by Yhondri Acosta Novas on 10/12/21.
 //
@@ -25,15 +26,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+import Foundation
 
-import XCTest
-@testable import HolidayThemes
-
-final class HolidayThemesTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(HolidayThemes().text, "Hello, World!")
-    }
+public enum Particle: String {
+    case autum = "autum_particle"
+    case spring = "spring_particle"
+    case summer = "summer_particle"
+    case winter = "winter_particle"
+    case none = "none"
 }

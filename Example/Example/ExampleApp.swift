@@ -1,5 +1,6 @@
 //
-//  HolidayThemesTests.swift
+//  ExampleApp.swift
+//  Example
 //
 //  Created by Yhondri Acosta Novas on 10/12/21.
 //
@@ -25,15 +26,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+import SwiftUI
+import HolidayThemes
 
-import XCTest
-@testable import HolidayThemes
-
-final class HolidayThemesTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(HolidayThemes().text, "Hello, World!")
+@main
+struct ExampleApp: App {
+    var body: some Scene {
+        WindowGroup {
+            GeometryReader { proxy in
+                ContentView()
+            }
+        }
     }
 }
